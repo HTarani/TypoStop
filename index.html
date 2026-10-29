@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>TypoStop - Typing speed test</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="themes.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <a class="brand" href="#"><span class="brand-mark">T</span> TypoStop</a>
+      <label class="theme-control" for="theme-choice">Theme
+        <select id="theme-choice" aria-label="Choose a theme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </header>
+
+    <section class="intro" aria-labelledby="title">
+      <p class="eyebrow">TYPING PRACTICE</p>
+      <h1 id="title">Find your <span>flow.</span></h1>
+      <p class="subtitle">Practice your typing and see your speed and accuracy.</p>
+    </section>
+
+    <section class="card" aria-label="Typing speed test">
+      <div class="toolbar">
+        <div class="group" role="group" aria-label="Test duration">
+          <button class="button" data-duration="15" type="button" aria-pressed="false">15 sec</button>
+          <button class="button active" data-duration="30" type="button" aria-pressed="true">30 sec</button>
+          <button class="button" data-duration="60" type="button" aria-pressed="false">60 sec</button>
+        </div>
+        <button class="restart" id="restart" type="button" title="Restart test (Esc)">Restart <kbd>Esc</kbd></button>
+      </div>
+
+      <div class="stats" aria-label="Live results">
+        <div class="stat-item"><span class="label">TIME</span><strong class="value" id="timer">30 sec</strong></div>
+        <div class="stat-item"><span class="label">WPM</span><strong class="value" id="wpm">0</strong></div>
+        <div class="stat-item"><span class="label">ACCURACY</span><strong class="value" id="accuracy">100%</strong></div>
+        <div class="stat-item"><span class="label">PERSONAL BEST</span><strong class="value" id="best">-</strong></div>
+      </div>
+
+      <div class="typing-area" id="typing-area">
+        <div class="passage" id="passage" aria-hidden="true"></div>
+        <textarea id="typing" aria-label="Type the passage shown above" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder=""></textarea>
+        <div class="start-hint" id="hint"><span aria-hidden="true">↵</span> Click here and start typing</div>
+      </div>
+
+      <div class="test-footer">
+        <span id="status" aria-live="polite">Ready when you are</span>
+        <span><kbd>Esc</kbd> to restart</span>
+      </div>
+      <div class="result" id="result" role="status" hidden></div>
+    </section>
+
+    <footer class="page-footer">Take a breath. Then begin.</footer>
+  </main>
+</body>
+</html>
