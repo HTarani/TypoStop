@@ -1,0 +1,25 @@
+body[data-theme="light"] {
+  color-scheme: light;
+  --text: #20243a;
+  --muted: #85899a;
+  --accent: #7565d8;
+  --line: #e5e6ed;
+  --card: #ffffff;
+  --background: #f7f8fc;
+  --typing-area: #fcfcfe;
+  --passage: #aeb1bf;
+  --soft: #f1f0f8;
+}
+
+body[data-theme="dark"] {
+  color-scheme: dark;
+  --text: #eceaf7;
+  --muted: #aaa7bb;
+  --accent: #a695ff;
+  --line: #3c394f;
+  --card: #211f30;
+  --background: #171622;
+  --typing-area: #1b1928;
+  --passage: #858197;
+  --soft: #302d41;
+}
